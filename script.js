@@ -1,29 +1,23 @@
-const wrapper dokumen.querySelector(".wrapper"); pertanyaan const = document.querySelector(".question"); const gif = dokumen.querySelector(".gif");
+const wrapper = document.querySelector(".wrapper");
+const question = document.querySelector(".question");
+const gif = document.querySelector(".gif");
+const yesBtn = document.querySelector(".yes-btn");
+const noBtn = document.querySelector(".no-btn");
 
-const yesBtn = dokumen.querySelector(".yes-btn"); const noBtn dokumen.querySelector(".no-btn");
-
-yesBtn.addEventListener("klik", () => {
-
-pertanyaan. innerHTML = "Aaaaa, aku juga menyukaimu";
-
-gif.src:
-
-"https://raw.githubusercontent.com/DzarelDeveloper/Img/main/gif.webp";
-
+yesBtn.addEventListener("click", () => {
+  question.innerHTML = "Aaaaa, I like you too";
+  gif.src =
+    "https://raw.githubusercontent.com/DzarelDeveloper/Img/main/gif.webp";
 });
 
 noBtn.addEventListener("mouseover", () => {
+  const noBtnRect = noBtn.getBoundingClientRect();
+  const maxX = window.innerWidth - noBtnRect.width;
+  const maxY = window.innerHeight - noBtnRect.height;
 
-const noBtnRect = noBtn.getBoundingClientRect(); const maxX = window.innerWidth noBtnRect.width; const maxY = jendela. innerHeight noBtnRect.height;
+  const randomX = Math.floor(Math.random() * maxX);
+  const randomY = Math.floor(Math.random() * maxY);
 
-CodeSphere
-
-const randomX = Matematika.lantai(Matematika.acak() maxX);
-
-const randomYMath.floor(Math.random() * maxY);
-
-noBtn.style.left = randomX + "px";
-
-noBtn.style.top = acakY + "px":
-
+  noBtn.style.left = randomX + "px";
+  noBtn.style.top = randomY + "px";
 });
